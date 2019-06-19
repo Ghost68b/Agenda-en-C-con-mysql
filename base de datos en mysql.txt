@@ -1,0 +1,321 @@
+create table usuarios (
+ id MEDIUMINT NOT NULL AUTO_INCREMENT,
+  Num_Control varchar(30),
+  TipoUsuario varchar(30),
+  Nombre varchar(30),
+  Usuario varchar(30),
+  Password varchar(30),
+  Fecha_que_se_agrego varchar(30),
+PRIMARY KEY (id)
+);
+insert into usuarios(Num_Control,TipoUsuario,Nombre,Usuario,Password,Fecha_que_se_agrego) values ('1','Administrador','root','ADMIN','123','pp');
+
+insert into usuarios(Num_Control,TipoUsuario,Nombre,Usuario,Password,Fecha_que_se_agrego) values ('2','Basico','chris','usus','123','p');
+
+create table Siniestrobd (
+ id MEDIUMINT NOT NULL AUTO_INCREMENT,
+    Num_con      VARCHAR (50),
+    Adrisa       VARCHAR (50),
+    inbursa      VARCHAR (50),
+    telmex       VARCHAR (50),
+    tipsin       VARCHAR (50),
+    monapda      VARCHAR (50),
+    areafe       VARCHAR (50),
+    domiloc      VARCHAR (50),
+    colo         VARCHAR (50),
+    cdestado     VARCHAR (50),
+    fechadeocu   VARCHAR (50),
+    hora         VARCHAR (50),
+    descridels   VARCHAR (50),
+    relaciondano VARCHAR (50),
+    a1           VARCHAR (50),
+    a2           VARCHAR (50),
+    a3           VARCHAR (50),
+    a4           VARCHAR (50),
+    a5           VARCHAR (50),
+    a6           VARCHAR (50),
+    a7           VARCHAR (50),
+    b1           VARCHAR (50),
+    b2           VARCHAR (50),
+    b3           VARCHAR (50),
+    b4           VARCHAR (50),
+    b5           VARCHAR (50),
+    b6           VARCHAR (50),
+    b7           VARCHAR (50),
+    c1           VARCHAR (50),
+    c2           VARCHAR (50),
+    c3           VARCHAR (50),
+    c4           VARCHAR (50),
+    c5           VARCHAR (50),
+    c6           VARCHAR (50),
+    c7           VARCHAR (50),
+    d1           VARCHAR (50),
+    d2           VARCHAR (50),
+    d3           VARCHAR (50),
+    d4           VARCHAR (50),
+    d5           VARCHAR (50),
+    d6           VARCHAR (50),
+    d7           VARCHAR (50),
+    cubiertopoli VARCHAR (50),
+    poblacon     VARCHAR (50),
+    direccionDiv VARCHAR (50),
+    observacion  VARCHAR (50),
+    reporta      VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table Administrativa (
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+    Num_con     VARCHAR (50),
+    cd          VARCHAR (50),
+    estado      VARCHAR (50),
+    dia1        VARCHAR (50),
+    mes1        VARCHAR (50),
+    ano         VARCHAR (50),
+    srs         VARCHAR (50),
+    tienda      VARCHAR (50),
+    ubicacion   VARCHAR (50),
+    dia2        VARCHAR (50),
+    mes2        VARCHAR (50),
+    ano2        VARCHAR (50),
+    hora        VARCHAR (50),
+    responsable VARCHAR (50),
+    monto       VARCHAR (50),
+    depart      VARCHAR (50),
+    fecha       VARCHAR (50),
+    hora2       VARCHAR (50),
+    descrip     VARCHAR (50),
+    danos       VARCHAR (50),
+    clasifi     VARCHAR (50),
+    domicilio   VARCHAR (50),
+    calle       VARCHAR (50),
+    delega      VARCHAR (50),
+    estado2     VARCHAR (50),
+    cdp         VARCHAR (50),
+    cata        VARCHAR (50),
+    ing1        VARCHAR (50),
+    ing2        VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table Subesta_Compa (
+    numcont MEDIUMINT NOT NULL AUTO_INCREMENT,
+    numcon VARCHAR (50),
+    Modelo     VARCHAR (50),
+    Serie      VARCHAR (50),
+    Servicio   VARCHAR (50),
+    Tensmaxideop   VARCHAR (50),
+    Tensioperacion VARCHAR (50),
+    Numerodefases  VARCHAR (50),
+    numhilo        VARCHAR (50),
+    capacicorri    VARCHAR (50),
+    frecueope   VARCHAR (50),
+    nivelbadeais   VARCHAR (50),
+    Tensisosteni   VARCHAR (50),
+    tensiondecon   VARCHAR (50),
+    capasidadmax   VARCHAR (50),
+    alturadeoperacion VARCHAR (50),
+    clasedepro     VARCHAR (50),
+    normdefabri     VARCHAR (50),
+    nomestacion varchar(50),
+    PRIMARY KEY (numcont)
+);
+
+create table Tablero_de_Proteccion_G (
+    NoSerie MEDIUMINT NOT NULL AUTO_INCREMENT,
+    No_de_Serie VARCHAR (50),
+    Estacion VARCHAR (50),
+    Tension_de_Operacion     VARCHAR (50),
+	Capacidad_de_Barras  VARCHAR (50),
+	M_S_N_M    VARCHAR (50),
+    A_ VARCHAR (50),
+    Fases  VARCHAR (50),
+    Hilos        VARCHAR (50),
+	Tension_de_Aislamiento   VARCHAR (50),
+	Tablero_Tipo     VARCHAR (50),
+    PRIMARY KEY (NoSerie)
+);
+
+create table SACE (
+    NoSerie MEDIUMINT NOT NULL AUTO_INCREMENT,
+	No_de_Serie VARCHAR (50),
+	Estacion VARCHAR (50),
+    Lu VARCHAR (50),
+    Ue  VARCHAR (50),
+    Icw    VARCHAR (50),
+    A1   VARCHAR (50),
+    A2  VARCHAR (50),
+    A3 VARCHAR (50),
+    B1  VARCHAR (50),
+    B2        VARCHAR (50),
+    B3   VARCHAR (50),
+	C1   VARCHAR (50),
+    C2  VARCHAR (50),
+    C3 VARCHAR (50),
+    D1  VARCHAR (50),
+    D2        VARCHAR (50),
+    D3   VARCHAR (50),
+	cat_B VARCHAR (50),
+    PRIMARY KEY (NoSerie)
+);
+
+create table PILAS (
+    NoSerie MEDIUMINT NOT NULL AUTO_INCREMENT,
+	No_de_Serie VARCHAR (50),
+	Numero VARCHAR (50),
+    Nombre VARCHAR (50),
+    Tipo_de_pila  VARCHAR (50),
+    Modelo   VARCHAR (50),
+    Fecha_de_fabricacion   VARCHAR (50),
+    Fecha_de_instalacion  VARCHAR (50),
+    Capacidad VARCHAR (50),
+    Nombre_de_Banco VARCHAR (50),
+	Banco_de_Baterias  VARCHAR (50),
+    PRIMARY KEY (NoSerie)
+);
+
+create table Extractor (
+    NoSerie MEDIUMINT NOT NULL AUTO_INCREMENT,
+	No_de_Serie VARCHAR (50),
+	Modelo VARCHAR (50),
+    Nombre VARCHAR (50),
+    Temperatura_a_activar  VARCHAR (50),
+    Temperatura_a_Desactivar  VARCHAR (50),
+    Fecha_de_instalacion   VARCHAR (50),
+    Amperaje  VARCHAR (50),
+    Voltaje VARCHAR (50),
+    Nombre_de_la_estacion VARCHAR (50),
+    PRIMARY KEY (NoSerie)
+);
+
+create table Tanque_de_Disel(
+    NoSerie MEDIUMINT NOT NULL AUTO_INCREMENT,
+	Numero_de_Serie VARCHAR (50),
+	Capasidad VARCHAR (50),
+    Modelo VARCHAR (50),
+	Litros_Actuales  VARCHAR (50),
+    Senales_Eticas  VARCHAR (50),
+	Dique VARCHAR (50),
+    PRIMARY KEY (NoSerie)
+);
+
+create table Cableado(
+    NoSerie MEDIUMINT NOT NULL AUTO_INCREMENT,
+	Numero_de_Serie VARCHAR (50),
+	Cantidad_de_cable_Media VARCHAR (50),
+	Tipo_de_aislamiento VARCHAR (50),
+    Tipo_de_cableado VARCHAR (50),
+    Numero_de_fases  VARCHAR (50),
+    Origen VARCHAR (50),
+	Destino VARCHAR (50),
+    PRIMARY KEY (NoSerie)
+);
+create table Transformador_en_Aceite (
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	Num_con      VARCHAR (50),
+	Estacion      VARCHAR (50),
+    kva      VARCHAR (50),
+    volts      VARCHAR (50),
+    fases      VARCHAR (50),
+    frec       VARCHAR (50),
+    imp       VARCHAR (50),
+    a      VARCHAR (50),
+    elev       VARCHAR (50),
+    caltitud      VARCHAR (50),
+    m_s_n_m_clase         VARCHAR (50),
+    nivel_basico     VARCHAR (50),
+    nuclea_y_bobinas   VARCHAR (50),
+    kgLtsAceite         VARCHAR (50),
+    instructivo   VARCHAR (50),
+    orden VARCHAR (50),
+	A1      VARCHAR (50),
+	A2      VARCHAR (50),
+    A3      VARCHAR (50),
+    A4      VARCHAR (50),
+    A5      VARCHAR (50),
+    A6      VARCHAR (50),
+    B1      VARCHAR (50),
+    B2      VARCHAR (50),
+    B3      VARCHAR (50),
+    B4      VARCHAR (50),
+    B5      VARCHAR (50),
+    B6      VARCHAR (50),
+	con1      VARCHAR (50),
+    con2     VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table Switch1(
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	num_con VARCHAR (50),
+	num_tablero VARCHAR (50),
+	numero VARCHAR (50),
+	capacidad VARCHAR (50),
+    tipodecable VARCHAR (50),
+    descripcion  VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table Tablero_de_distribucion(
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	num_con VARCHAR (50),
+	nombre VARCHAR (50),
+	modelo VARCHAR (50),
+    tension VARCHAR (50),
+    tipodecable VARCHAR (50),
+    descripcion  VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table Acometida(
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	num_con VARCHAR (50),
+	capa1 VARCHAR (50),
+    capa2 VARCHAR (50),
+    capa3 VARCHAR (50),
+    corta_circui  VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table Telealimenta(
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	num_con VARCHAR (50),
+	Marca VARCHAR (50),
+    Equipo VARCHAR (50),
+    Ip VARCHAR (50),
+    Identificador  VARCHAR (50),
+	tablero  VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table Inversor(
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	num_con VARCHAR (50),
+	Marca VARCHAR (50),
+    Modelo VARCHAR (50),
+    capacidad VARCHAR (50),
+    descripcion  VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table Subesta_Compa_Motor(
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	num_con VARCHAR (50),
+	Modeolo VARCHAR (50),
+    Capacidad VARCHAR (50),
+    Marca VARCHAR (50),
+    Generador  VARCHAR (50),
+	Descripcion  VARCHAR (50),
+    PRIMARY KEY (id)
+);
+
+create table TablerodeElec(
+    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+	num_con VARCHAR (50),
+	Modeolo VARCHAR (50),
+    Capacidad VARCHAR (50),
+    Marca VARCHAR (50),
+    Generador  VARCHAR (50),
+	Descripcion  VARCHAR (50),
+    PRIMARY KEY (id)
+);
